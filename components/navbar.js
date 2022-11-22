@@ -1,6 +1,7 @@
 import Logo from './logo'
 import NextLink from 'next/link'
 import FootprintIcon from './icons/footprint'
+import ThemeToggleButton from './theme-toggle-button'
 import {
   Container,
   Box,
@@ -76,6 +77,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
         <Box flex={1} align="rigth">
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}></Box>
           <Menu>
             <MenuButton
@@ -95,9 +97,9 @@ const Navbar = props => {
                 <MenuItem as={Link}>Posts</MenuItem>
               </NextLink>
 
-              {/* <MenuItem as={Link} href="https://www.craftz.dog/">
+              <MenuItem as={Link} href="https://www.craftz.dog/">
                 View Source
-              </MenuItem> */}
+              </MenuItem>
             </MenuList>
           </Menu>
         </Box>
